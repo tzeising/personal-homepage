@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tom Zeising | Economics, Data Science & SciComm</title>
@@ -10,31 +10,236 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .serif {
-            font-family: 'Lora', serif;
-        }
-        ::selection {
-            background: #e5e7eb;
-            color: #111827;
-        }
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .serif {
+        font-family: 'Lora', serif;
+      }
+      ::selection {
+        background: #e5e7eb;
+        color: #111827;
+      }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
-</head>
-<body class="bg-[#fafafa] text-zinc-900 antialiased selection:bg-zinc-200">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-</body>
+  </head>
+  <body class="bg-[#fafafa] text-zinc-900 antialiased selection:bg-zinc-200">
+    <div class="bg-zinc-900 text-white text-[10px] uppercase tracking-[0.35em] font-bold py-3">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-zinc-400 font-mono tracking-normal">[Latest]</span>
+        <div class="flex flex-wrap gap-6">
+          <a class="hover:text-green-400 transition-colors" href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">New working paper on fair pricing</a>
+          <a class="hover:text-green-400 transition-colors" href="https://github.com/tzeising" target="_blank" rel="noopener noreferrer">Personal data science sandbox</a>
+          <a class="hover:text-green-400 transition-colors" href="https://www.uni-heidelberg.de" target="_blank" rel="noopener noreferrer">Teaching macro & applied econometrics</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <nav class="sticky top-0 z-50 py-8 bg-[#fafafa]/90 backdrop-blur-md flex flex-wrap items-center justify-between gap-6 border-b border-transparent">
+        <h1 class="text-lg font-semibold tracking-tight">Tom Zeising</h1>
+        <div class="flex flex-wrap gap-8 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+          <a href="#about" class="hover:text-zinc-900 transition-colors">About</a>
+          <a href="#research" class="hover:text-zinc-900 transition-colors">Research</a>
+          <a href="#projects" class="hover:text-zinc-900 transition-colors">Projects</a>
+          <a href="#experience" class="hover:text-zinc-900 transition-colors">Experience</a>
+          <a href="#contact" class="hover:text-zinc-900 transition-colors">Contact</a>
+        </div>
+      </nav>
+
+      <header class="py-24 md:py-32 flex flex-col md:flex-row gap-16 items-start md:items-center">
+        <div class="flex-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 text-white rounded-full mb-8">
+            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Open to collaborations</span>
+          </div>
+          <h2 class="serif text-5xl md:text-7xl font-normal leading-tight text-zinc-900 max-w-4xl">
+            Economist & data scientist
+            <br>
+            turning research into
+            <br>
+            <span class="text-zinc-400 italic">actionable insight</span>
+          </h2>
+          <p class="mt-12 text-lg md:text-xl text-zinc-600 max-w-2xl leading-relaxed">
+            I work at the intersection of economics, machine learning, and science communication.
+            My focus is on fair pricing, sustainability, and making complex research accessible to
+            decision-makers.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">
+            <span>Heidelberg University</span>
+            <span>Applied Econometrics</span>
+            <span>Data Visualization</span>
+          </div>
+        </div>
+        <div class="relative w-56 h-[350px] md:w-72 md:h-[450px] flex-shrink-0 group">
+          <div class="absolute inset-0 bg-zinc-100 rounded-sm overflow-hidden border border-zinc-200 shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Tom Zeising portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-[#fafafa] border border-zinc-200 rotate-45 flex items-center justify-center shadow-sm">
+            <div class="-rotate-45 text-[10px] font-bold text-zinc-400">TZ</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="space-y-24">
+        <section id="about" class="space-y-12">
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">About</h2>
+          <p class="text-xl text-zinc-800 leading-relaxed font-light max-w-3xl">
+            I am a researcher at the Alfred Weber Institute, specializing in applied microeconomics and
+            data-driven policy evaluation. I translate empirical research into decision-ready insights,
+            focusing on pricing, energy markets, and behavioral responses to policy design.
+          </p>
+          <div class="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Education</h3>
+              <div class="mt-6 space-y-6">
+                <div>
+                  <h4 class="text-lg font-medium text-zinc-900">PhD, Economics</h4>
+                  <p class="text-zinc-700 serif italic">Heidelberg University</p>
+                  <p class="text-sm text-zinc-500 mt-2">Dissertation on fairness perceptions in dynamic pricing models.</p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-zinc-900">MSc, Data Science</h4>
+                  <p class="text-zinc-700 serif italic">University of Mannheim</p>
+                  <p class="text-sm text-zinc-500 mt-2">Specialization in causal inference and applied machine learning.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Focus Areas</h3>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="text-sm text-zinc-700 bg-zinc-100 px-3 py-1 rounded-full">Behavioral Economics</span>
+                <span class="text-sm text-zinc-700 bg-zinc-100 px-3 py-1 rounded-full">Pricing & Markets</span>
+                <span class="text-sm text-zinc-700 bg-zinc-100 px-3 py-1 rounded-full">ML for Policy</span>
+                <span class="text-sm text-zinc-700 bg-zinc-100 px-3 py-1 rounded-full">Data Storytelling</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="research" class="space-y-10">
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Research</h2>
+          <div class="divide-y divide-zinc-200">
+            <div class="py-8">
+              <h3 class="text-2xl font-normal text-zinc-900 italic serif">Fairness Perceptions in Dynamic Pricing</h3>
+              <p class="mt-2 text-sm text-zinc-500 font-medium">Working paper · 2024</p>
+              <p class="mt-4 text-zinc-600">Investigates how consumers respond to algorithmic price changes across essential goods.</p>
+            </div>
+            <div class="py-8">
+              <h3 class="text-2xl font-normal text-zinc-900 italic serif">Energy Demand Elasticities in Urban Europe</h3>
+              <p class="mt-2 text-sm text-zinc-500 font-medium">Journal submission · 2023</p>
+              <p class="mt-4 text-zinc-600">Combines smart meter data with socio-economic indicators to estimate demand responses.</p>
+            </div>
+            <div class="py-8">
+              <h3 class="text-2xl font-normal text-zinc-900 italic serif">Designing Transparent Pricing Experiments</h3>
+              <p class="mt-2 text-sm text-zinc-500 font-medium">Policy brief · 2022</p>
+              <p class="mt-4 text-zinc-600">Guidelines for policymakers to communicate pricing reforms effectively.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="space-y-10">
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Projects</h2>
+          <div class="divide-y divide-zinc-200">
+            <div class="py-8">
+              <h3 class="text-2xl font-normal text-zinc-900 italic serif">Market Insights Dashboard</h3>
+              <p class="mt-4 text-zinc-600">Interactive dashboard translating pricing experiments into executive-ready insights.</p>
+              <div class="mt-6 flex flex-wrap gap-3 text-[10px] uppercase tracking-widest font-bold text-zinc-400">
+                <span>Tableau</span>
+                <span>Storytelling</span>
+                <span>Policy</span>
+              </div>
+            </div>
+            <div class="py-8">
+              <h3 class="text-2xl font-normal text-zinc-900 italic serif">Climate Policy Dataset</h3>
+              <p class="mt-4 text-zinc-600">Curated dataset on European climate incentives with open documentation.</p>
+              <div class="mt-6 flex flex-wrap gap-3 text-[10px] uppercase tracking-widest font-bold text-zinc-400">
+                <span>Open Data</span>
+                <span>Python</span>
+                <span>Visualization</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="space-y-10">
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Experience</h2>
+          <div class="space-y-12">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg font-medium text-zinc-900">Alfred Weber Institute</h3>
+                <p class="text-zinc-500 text-xs mt-1 uppercase tracking-wider">Heidelberg / 2020 - Present</p>
+              </div>
+              <div>
+                <h4 class="text-lg text-zinc-700 italic serif">Research Associate</h4>
+                <ul class="mt-4 space-y-2">
+                  <li class="text-sm text-zinc-600 leading-relaxed flex items-start gap-2">
+                    <span class="text-zinc-300">—</span> Led applied econometrics projects for energy pricing reforms.
+                  </li>
+                  <li class="text-sm text-zinc-600 leading-relaxed flex items-start gap-2">
+                    <span class="text-zinc-300">—</span> Designed policy dashboards for municipal stakeholders.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg font-medium text-zinc-900">Institute for Future Finance</h3>
+                <p class="text-zinc-500 text-xs mt-1 uppercase tracking-wider">Berlin / 2018 - 2020</p>
+              </div>
+              <div>
+                <h4 class="text-lg text-zinc-700 italic serif">Data Scientist</h4>
+                <ul class="mt-4 space-y-2">
+                  <li class="text-sm text-zinc-600 leading-relaxed flex items-start gap-2">
+                    <span class="text-zinc-300">—</span> Built ML models for demand forecasting in retail energy.
+                  </li>
+                  <li class="text-sm text-zinc-600 leading-relaxed flex items-start gap-2">
+                    <span class="text-zinc-300">—</span> Established a reproducible research pipeline using Python.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="space-y-10">
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Contact</h2>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <p class="text-2xl serif italic text-zinc-800">
+                Let’s connect if you want to collaborate on pricing research, data visualization, or policy evaluation.
+              </p>
+              <div class="mt-8 space-y-4">
+                <a href="mailto:tom.zeising@awi.uni-heidelberg.de" class="block text-xl border-b border-zinc-200 pb-2 hover:border-zinc-900 transition-all font-medium">
+                  tom.zeising@awi.uni-heidelberg.de
+                </a>
+                <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+                  <a href="https://linkedin.com/in/tzeising" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 transition-colors">LinkedIn</a>
+                  <a href="https://github.com/tzeising" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 transition-colors">GitHub</a>
+                  <a href="https://twitter.com/tzeising" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 transition-colors">Twitter</a>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <div class="w-full h-48 border border-zinc-200 flex items-center justify-center p-8 bg-zinc-50 relative group">
+                <span class="text-zinc-400 text-[10px] font-mono leading-loose text-center uppercase tracking-widest">
+                  Heidelberg University <br>
+                  Department of Economics <br>
+                  Bergheimer Str. 58 <br>
+                  69115 Heidelberg, Germany
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="py-20 text-center border-t border-zinc-100 mt-20">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium">
+          &copy; 2025 Tom Zeising — Economics & Data Science
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
