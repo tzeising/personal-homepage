@@ -67,7 +67,7 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
       items: [
         { text: "Guest appearance on SWR Nachtcafé: 'Mutige Entscheidungen'", url: "https://www.youtube.com/watch?v=KRKLE5IDJNk" },
         { text: "Published: 'Who Goes Forward and Who is Left Behind?'", url: "https://heiup.uni-heidelberg.de/journals/rupertocarola/article/view/25099" },
-        { text: "New hobby project: escaping2earth.com", url: "https://escaping2earth.com" }
+        { text: "Founding of my hobby project: escaping2earth.com", url: "https://escaping2earth.com" }
       ]
     }
   },
@@ -93,9 +93,9 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
     news: {
       prefix: "Neuigkeiten",
       items: [
-        { text: "Gastauftritt im SWR Nachtcafé: 'Mutige Entscheidungen'", url: "https://www.youtube.com/watch?v=KRKLE5IDJNk" },
-        { text: "Veröffentlicht: 'Who Goes Forward and Who is Left Behind?'", url: "https://heiup.uni-heidelberg.de/journals/rupertocarola/article/view/25099" },
-        { text: "Neues Hobbyprojekt: escaping2earth.com", url: "https://escaping2earth.com" }
+        { text: "Gastauftritt im SWR Nachtcafé zum Thema 'Mutige Entscheidungen'", url: "https://www.youtube.com/watch?v=KRKLE5IDJNk" },
+        { text: "Veröffentlichung von 'Who Goes Forward and Who is Left Behind?'", url: "https://heiup.uni-heidelberg.de/journals/rupertocarola/article/view/25099" },
+        { text: "Gründung meines Hobbyprojekts: escaping2earth.com", url: "https://escaping2earth.com" }
       ]
     }
   }

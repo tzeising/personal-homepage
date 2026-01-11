@@ -15,24 +15,23 @@ import {
 
 const NewsTicker: React.FC<{ lang: 'en' | 'de' }> = ({ lang }) => {
   const news = TRANSLATIONS[lang].news;
+  // Repeat items to ensure smooth infinite scroll
+  const items = [...news.items, ...news.items, ...news.items];
+  
   return (
     <div className="bg-zinc-900 text-white overflow-hidden py-3 border-b border-white/10 relative">
       <div className="flex whitespace-nowrap animate-marquee hover:pause group">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="flex items-center">
-            {news.items.map((item, idx) => (
-              <a 
-                key={`${i}-${idx}`} 
-                href={item.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="mx-12 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-green-400 transition-colors flex items-center gap-3"
-              >
-                <span className="text-zinc-500 font-mono tracking-normal">[{news.prefix}]</span>
-                {item.text}
-              </a>
-            ))}
-          </div>
+        {items.map((item, idx) => (
+          <a 
+            key={idx} 
+            href={item.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="mx-12 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-green-400 transition-colors flex items-center gap-3"
+          >
+            <span className="text-zinc-500 font-mono tracking-normal">[{news.prefix}]</span>
+            {item.text}
+          </a>
         ))}
       </div>
       <style>{`
@@ -41,7 +40,7 @@ const NewsTicker: React.FC<{ lang: 'en' | 'de' }> = ({ lang }) => {
           100% { transform: translateX(-33.333%); }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 30s linear infinite;
         }
         .pause:hover {
           animation-play-state: paused;
@@ -59,7 +58,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      {/* News Ticker */}
+      {/* News Ticker at the very top */}
       <NewsTicker lang={lang} />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-12 selection:bg-zinc-200">
@@ -80,9 +79,9 @@ const App: React.FC = () => {
               onClick={toggleLang}
               className="px-3 py-1 border border-zinc-200 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 transition-all rounded-sm flex items-center gap-2"
             >
-              <span className={lang === 'en' ? 'text-zinc-900' : ''}>EN</span>
+              <span className={lang === 'en' ? 'text-zinc-900 font-black' : ''}>EN</span>
               <span className="w-px h-2 bg-zinc-200"></span>
-              <span className={lang === 'de' ? 'text-zinc-900' : ''}>DE</span>
+              <span className={lang === 'de' ? 'text-zinc-900 font-black' : ''}>DE</span>
             </button>
           </div>
         </nav>
@@ -106,18 +105,28 @@ const App: React.FC = () => {
             </p>
           </div>
           
-          {/* Portrait Section */}
-          <div className="relative w-56 h-[350px] md:w-72 md:h-[450px] flex-shrink-0 group">
-            <div className="absolute inset-0 bg-zinc-100 rounded-sm overflow-hidden border border-zinc-200 shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
-              {/* Replace with actual image path or data URL if needed */}
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
-                alt="Tom Zeising Portrait" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          {/* Portrait Photo Section */}
+          <div className="relative w-full max-w-sm md:w-80 lg:w-96 flex-shrink-0 group">
+            <div className="aspect-[3/4] bg-zinc-100 rounded-sm overflow-hidden border border-zinc-200 shadow-xl transition-transform duration-700 group-hover:scale-[1.01]">
+              {/* Note for the User: Replace the src with your portrait file path, e.g., src="portrait.jpg" */}
+              <div className="w-full h-full relative">
+                <div className="absolute inset-0 bg-zinc-50 flex items-center justify-center text-zinc-300 font-mono text-[10px] uppercase tracking-widest">
+                  Portrait Placeholder
+                </div>
+                {/* 
+                  IMPORTANT: This image tag is set up to work as soon as you provide the file.
+                  For GitHub Pages, ensure the image file is in the same directory.
+                */}
+                <img 
+                  src="portrait.jpg" 
+                  alt="Tom Zeising" 
+                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-0"
+                  onLoad={(e) => (e.currentTarget.style.opacity = '1')}
+                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                />
+              </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-[#fafafa] border border-zinc-200 rotate-45 flex items-center justify-center shadow-sm">
+            <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-white border border-zinc-200 rotate-45 flex items-center justify-center shadow-md">
               <div className="-rotate-45 text-[10px] font-bold text-zinc-400">TZ</div>
             </div>
           </div>
@@ -277,8 +286,8 @@ const App: React.FC = () => {
             </div>
           </Section>
 
-          {/* Awards & Skills */}
-          <Section id="skills" title={t.expertise.title}>
+          {/* Expertise */}
+          <Section id="expertise" title={t.expertise.title}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div className="space-y-10">
                 <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">{t.expertise.awards}</h3>
@@ -296,7 +305,7 @@ const App: React.FC = () => {
                 <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">{t.expertise.technical}</h3>
                 <div className="flex flex-wrap gap-x-4 gap-y-2">
                   {SKILLS.map((skill, idx) => (
-                    <span key={idx} className="text-sm text-zinc-700 bg-zinc-100 px-3 py-1 rounded-full">{skill}</span>
+                    <span key={idx} className="text-sm text-zinc-700 bg-zinc-200/50 px-3 py-1 rounded-sm">{skill}</span>
                   ))}
                 </div>
                 
@@ -341,8 +350,8 @@ const App: React.FC = () => {
                       Bergheimer Str. 58 <br/>
                       69115 Heidelberg, Germany
                     </span>
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[#fafafa]/80 backdrop-blur-sm transition-opacity flex items-center justify-center">
-                      <span className="text-zinc-900 text-[10px] font-bold tracking-[0.3em] uppercase italic">{t.contact.office}</span>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-zinc-900 text-white transition-opacity flex items-center justify-center">
+                      <span className="text-[10px] font-bold tracking-[0.3em] uppercase italic">{t.contact.office}</span>
                     </div>
                  </div>
               </div>
