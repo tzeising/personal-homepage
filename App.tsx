@@ -164,7 +164,7 @@ const App: React.FC = () => {
                 <img 
                   src={portrait} 
                   alt="Portrait of Tom Zeising" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-0"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 opacity-0 group-hover:scale-[1.03]"
                   onLoad={(e) => (e.currentTarget.style.opacity = '1')}
                   onError={(e) => (e.currentTarget.style.display = 'none')}
                 />
