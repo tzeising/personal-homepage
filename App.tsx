@@ -52,17 +52,34 @@ const NewsTicker: React.FC<{ lang: 'en' | 'de' }> = ({ lang }) => {
   );
 };
 
+const getStoredLang = (): 'en' | 'de' | null => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  try {
+    const storedLang = window.localStorage.getItem('lang');
+    if (storedLang === 'en' || storedLang === 'de') {
+      return storedLang;
+    }
+  } catch (error) {
+    return null;
+  }
+
+  return null;
+};
+
 const getInitialLang = (): 'en' | 'de' => {
+  const storedLang = getStoredLang();
+  if (storedLang) {
+    return storedLang;
+  }
+
   if (typeof window === 'undefined') {
     return 'en';
   }
 
-  const storedLang = window.localStorage.getItem('lang');
-  if (storedLang === 'en' || storedLang === 'de') {
-    return storedLang;
-  }
-
-  return window.navigator.language.toLowerCase().startsWith('de') ? 'de' : 'en';
+  return window.navigator?.language?.toLowerCase().startsWith('de') ? 'de' : 'en';
 };
 
 const App: React.FC = () => {
@@ -73,7 +90,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    window.localStorage.setItem('lang', lang);
+    try {
+      window.localStorage.setItem('lang', lang);
+    } catch (error) {
+      // Ignore storage write errors (e.g., blocked storage in some browsers).
+    }
   }, [lang]);
 
   return (
