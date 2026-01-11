@@ -12,7 +12,7 @@ export const RESEARCH_PAPERS: ResearchPaper[] = [
     title: "Racial Disparities in Environmental Auditing in the US",
     authors: "Balietti, A., Zeising, T.",
     status: "Working Paper",
-    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1234567"
+    link: "https://archiv.ub.uni-heidelberg.de/volltextserver/34516/"
   },
   {
     title: "Conflicting Interests: Agricultural Ties and the Enforcement of Environmental Bans",

@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import Section from './components/Section';
+import logo from './components/TZ-logo.svg';
+import portrait from './components/tom.-zeising.jpg';
 import { 
   TRANSLATIONS,
   EDUCATION_DATA, 
@@ -64,7 +66,10 @@ const App: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-12 selection:bg-zinc-200">
         {/* Navigation */}
         <nav className="sticky top-0 z-50 py-8 bg-[#fafafa]/80 backdrop-blur-md flex justify-between items-center border-b border-transparent">
-          <h1 className="text-lg font-semibold tracking-tight">Tom Zeising</h1>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="TZ logo" className="w-8 h-8" />
+            <h1 className="text-lg font-semibold tracking-tight">Tom Zeising</h1>
+          </div>
           <div className="flex items-center gap-8">
             <div className="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
               <a href="#about" className="hover:text-zinc-900 transition-colors">{t.nav.about}</a>
@@ -118,8 +123,8 @@ const App: React.FC = () => {
                   For GitHub Pages, ensure the image file is in the same directory.
                 */}
                 <img 
-                  src="portrait.jpg" 
-                  alt="Tom Zeising" 
+                  src={portrait} 
+                  alt="Portrait of Tom Zeising" 
                   className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-0"
                   onLoad={(e) => (e.currentTarget.style.opacity = '1')}
                   onError={(e) => (e.currentTarget.style.display = 'none')}
