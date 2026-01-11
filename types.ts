@@ -53,6 +53,7 @@ export interface TranslationSet {
     role3: string;
     subtitle: string;
     openForWork: string;
+    portraitPlaceholder: string;
   };
   about: {
     title: string;
@@ -82,9 +83,13 @@ export interface TranslationSet {
     title: string;
     collab: string;
     office: string;
+    addressLines: string[];
   };
   news: {
     prefix: string;
     items: NewsItem[];
+  };
+  footer: {
+    tagline: string;
   };
 }
