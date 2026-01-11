@@ -352,7 +352,7 @@ const App: React.FC = () => {
 
         <footer className="py-20 text-center border-t border-zinc-100 mt-20">
           <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium">
-            &copy; {new Date().getFullYear()} Tom Zeising — Economics & Data Science
+            &copy; 2026 Tom Zeising — Economics & Data Science
           </p>
         </footer>
       </div>

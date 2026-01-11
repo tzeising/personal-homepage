@@ -44,30 +44,30 @@ export const LANGUAGES_DATA = [
 
 export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
   en: {
-    nav: { about: "About", research: "Research", projects: "Interests", experience: "Experience", contact: "Connect" },
+    nav: { about: "Über mich", research: "Forschung", projects: "Interessen", experience: "Erfahrung", contact: "Kontakt" },
     hero: { 
-      role1: "Economics PhD.", 
+      role1: "VWL Promotion.", 
       role2: "Data Science.", 
-      role3: "SciComm.", 
-      subtitle: "Based in Mannheim, Germany. Bridging the gap between environmental econometrics and accessible data narratives.",
-      openForWork: "Available for new opportunities in Economic Consulting & Data Science"
+      role3: "WissKomm.", 
+      subtitle: "Ansässig in Mannheim, Deutschland. Ich schlage die Brücke zwischen Umweltökonometrie und verständlichen Datengeschichten.",
+      openForWork: "Offen für neue Herausforderungen in der Wirtschaftsberatung & Data Science"
     },
     about: { 
-      title: "About", 
-      bio: "I am a PhD candidate in Economics at Heidelberg University, specializing in Environmental and Developmental Economics. My work integrates causal inference with modern data science tools like satellite data analysis and NLP. Currently finishing my PhD, I am open to new professional challenges in consulting and data-driven roles where I can leverage my expertise in policy analysis and computational social science.",
-      education: "Education"
+      title: "Über mich", 
+      bio: "Ich bin Doktorand der Wirtschaftswissenschaften an der Universität Heidelberg mit Spezialisierung auf Umwelt- und Entwicklungsökonomie. In meiner Arbeit verbinde ich kausale Inferenz mit modernen Data-Science-Tools. Kurz vor Abschluss meiner Promotion suche ich nach neuen beruflichen Herausforderungen in der Beratung oder im Data-Science-Bereich, um meine Expertise in Politikanalyse und Computational Social Science einzubringen.",
+      education: "Bildungsweg"
     },
-    research: { title: "Research", viewPaper: "View Paper" },
-    projects: { title: "Interests", subtitle: "Digital Projects" },
-    experience: { title: "Experience", professional: "Professional", researchTeaching: "Research & Teaching" },
-    expertise: { title: "Expertise", awards: "Awards & Grants", technical: "Technical Skills", languages: "Languages" },
-    contact: { title: "Connect", collab: "I am currently looking for roles in Economic Consulting, Data Science, and Public Outreach. Let's talk.", office: "Office" },
+    research: { title: "Forschung", viewPaper: "Paper ansehen" },
+    projects: { title: "Interessen", subtitle: "Digitale Projekte" },
+    experience: { title: "Erfahrung", professional: "Beruflich", researchTeaching: "Forschung & Lehre" },
+    expertise: { title: "Expertise", awards: "Auszeichnungen & Stipendien", technical: "Technische Skills", languages: "Sprachen" },
+    contact: { title: "Kontakt", collab: "Ich suche derzeit nach Positionen in der Wirtschaftsberatung, Data Science und Wissenschaftskommunikation. Melden Sie sich gerne.", office: "Büro" },
     news: {
-      prefix: "News",
+      prefix: "Neuigkeiten",
       items: [
-        { text: "Guest appearance on SWR Nachtcafé: 'Mutige Entscheidungen'", url: "https://www.youtube.com/watch?v=KRKLE5IDJNk" },
-        { text: "Published: 'Who Goes Forward and Who is Left Behind?'", url: "https://heiup.uni-heidelberg.de/journals/rupertocarola/article/view/25099" },
-        { text: "New hobby project: escaping2earth.com", url: "https://escaping2earth.com" }
+        { text: "Gastauftritt im SWR Nachtcafé: 'Mutige Entscheidungen'", url: "https://www.youtube.com/watch?v=KRKLE5IDJNk" },
+        { text: "Veröffentlicht: 'Who Goes Forward and Who is Left Behind?'", url: "https://heiup.uni-heidelberg.de/journals/rupertocarola/article/view/25099" },
+        { text: "Neues Hobbyprojekt: escaping2earth.com", url: "https://escaping2earth.com" }
       ]
     }
   },
@@ -103,9 +103,9 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
 
 export const EDUCATION_DATA: Record<'en' | 'de', Education[]> = {
   en: [
-    { institution: "Heidelberg University", degree: "PhD Economics (Environmental and Developmental Economics)", location: "Heidelberg, Germany", period: "June 2022 — Present", details: "Scholarship and Doctoral Program 'Development and Security in the 21st Century' (Konrad Adenauer Foundation). Founder of EcoGrowth." },
-    { institution: "University of Mannheim", degree: "PhD Course Program", location: "Mannheim, Germany", period: "Graduated May 2023", details: "Statistics, Mathematics, Micro- and Macroeconomics, and programming in R and Python." },
-    { institution: "Heidelberg University", degree: "MSc Economics (Top 3%)", location: "Heidelberg, Germany", period: "Graduated March 2022", details: "Konrad Adenauer Scholarship for gifted and talented students." }
+    { institution: "Universität Heidelberg", degree: "Promotion in Volkswirtschaftslehre (Umwelt- und Entwicklungsökonomik)", location: "Heidelberg, Deutschland", period: "Juni 2022 — Heute", details: "Promotionskolleg 'Sicherheit und Entwicklung im 21. Jahrhundert' (Konrad-Adenauer-Stiftung). Gründer von EcoGrowth." },
+    { institution: "Universität Mannheim", degree: "PhD Kursprogramm", location: "Mannheim, Deutschland", period: "Abschluss Mai 2023", details: "Statistik, Mathematik, Mikro- und Makroökonomie sowie Programmierung in R und Python." },
+    { institution: "Universität Heidelberg", degree: "MSc Economics (Top 3%)", location: "Heidelberg, Deutschland", period: "Abschluss März 2022", details: "Konrad-Adenauer-Stipendium für besonders Begabte." }
   ],
   de: [
     { institution: "Universität Heidelberg", degree: "Promotion in Volkswirtschaftslehre (Umwelt- und Entwicklungsökonomik)", location: "Heidelberg, Deutschland", period: "Juni 2022 — Heute", details: "Promotionskolleg 'Sicherheit und Entwicklung im 21. Jahrhundert' (Konrad-Adenauer-Stiftung). Gründer von EcoGrowth." },
@@ -116,10 +116,10 @@ export const EDUCATION_DATA: Record<'en' | 'de', Education[]> = {
 
 export const WORK_EXPERIENCE: Record<'en' | 'de', Experience[]> = {
   en: [
-    { role: "Data Scientist", organization: "Freelancing Fiverr / UpWork", location: "Remote", period: "July 2021 — Aug 2024", details: ["Implementation of 20+ client projects in Medicine, Business, and Geography.", "Development of data-driven solutions in Python, R & SQL.", "Creation of 'Databriefs' and Dashboards (Tableau, PowerBI)."] },
-    { role: "Chairman of the Board", organization: "IFAIR", location: "Berlin", period: "Jan 2022 — Aug 2024", details: ["Management of 200 members post-COVID.", "Building German-Indian network with three trips to India.", "Increased membership by 15%."] },
-    { role: "Business Development Intern", organization: "ME Creative Studios", location: "Kuala Lumpur", period: "2019", details: ["Python app support.", "Article authoring."] },
-    { role: "Diplomatic Communications Intern", organization: "InterMedia Japan", location: "Tokyo", period: "2019", details: ["Magazine authoring.", "Event planning for 5,000+ participants."] }
+    { role: "Data Scientist", organization: "Freelancing Fiverr / UpWork", location: "Remote", period: "Juli 2021 — Aug 2024", details: ["Umsetzung von 20+ Kundenprojekten in Medizin, Wirtschaft und Geographie.", "Entwicklung datengestützter Lösungen in Python, R & SQL.", "Erstellung von 'Databriefs' und Dashboards (Tableau, PowerBI)."] },
+    { role: "Vorstandsvorsitzender", organization: "IFAIR", location: "Berlin", period: "Jan 2022 — Aug 2024", details: ["Leitung von 200 Mitgliedern nach COVID.", "Aufbau eines deutsch-indischen Netzwerks mit drei Indien-Reisen.", "Mitgliedersteigerung um 15%."] },
+    { role: "Business Development Intern", organization: "ME Creative Studios", location: "Kuala Lumpur", period: "2019", details: ["Unterstützung bei Python-Apps.", "Verfassen von Online-Artikeln."] },
+    { role: "Diplomatic Communications Intern", organization: "InterMedia Japan", location: "Tokyo", period: "2019", details: ["Magazinautor.", "Eventplanung für über 5.000 Teilnehmer."] }
   ],
   de: [
     { role: "Data Scientist", organization: "Freelancing Fiverr / UpWork", location: "Remote", period: "Juli 2021 — Aug 2024", details: ["Umsetzung von 20+ Kundenprojekten in Medizin, Wirtschaft und Geographie.", "Entwicklung datengestützter Lösungen in Python, R & SQL.", "Erstellung von 'Databriefs' und Dashboards (Tableau, PowerBI)."] },
@@ -131,8 +131,8 @@ export const WORK_EXPERIENCE: Record<'en' | 'de', Experience[]> = {
 
 export const RESEARCH_TEACHING: Record<'en' | 'de', Experience[]> = {
   en: [
-    { role: "Lecturer 'Intro to Economics'", organization: "Heidelberg University", location: "Heidelberg", period: "2019 — 2024", details: ["Automated grading with R.", "Supervision of 500 participants."] },
-    { role: "Research Assistant", organization: "Heidelberg University", location: "Heidelberg", period: "2020 — 2025", details: ["Satellite data analysis (ArcGIS, Python).", "German-Pakistani team leadership."] }
+    { role: "Dozent 'Einführung in die VWL'", organization: "Universität Heidelberg", location: "Heidelberg", period: "2019 — 2024", details: ["Einführung automatisierter Korrektur mit R.", "Betreuung von 500 Teilnehmern."] },
+    { role: "Wissenschaftlicher Mitarbeiter", organization: "Universität Heidelberg", location: "Heidelberg", period: "2020 — 2025", details: ["Satellitendatenanalyse (ArcGIS, Python).", "Leitung eines deutsch-pakistanischen Teams."] }
   ],
   de: [
     { role: "Dozent 'Einführung in die VWL'", organization: "Universität Heidelberg", location: "Heidelberg", period: "2019 — 2024", details: ["Einführung automatisierter Korrektur mit R.", "Betreuung von 500 Teilnehmern."] },
@@ -141,15 +141,15 @@ export const RESEARCH_TEACHING: Record<'en' | 'de', Experience[]> = {
 };
 
 export const HOBBY_PROJECTS: Record<'en' | 'de', Project[]> = {
-  en: [{ title: "escaping2earth.com", url: "https://escaping2earth.com", description: "A travel blog and knowledge platform investigating political, economic, and cultural dynamics worldwide. Designed and coded by myself.", tags: ["UI/UX", "React", "Frontend", "SciComm"] }],
+  en: [{ title: "escaping2earth.com", url: "https://escaping2earth.com", description: "Ein Reiseblog und eine Wissensplattform, die politische, wirtschaftliche und kulturelle Dynamiken weltweit untersucht. Von mir selbst gestaltet und programmiert.", tags: ["UI/UX", "React", "Frontend", "WissKomm"] }],
   de: [{ title: "escaping2earth.com", url: "https://escaping2earth.com", description: "Ein Reiseblog und eine Wissensplattform, die politische, wirtschaftliche und kulturelle Dynamiken weltweit untersucht. Von mir selbst gestaltet und programmiert.", tags: ["UI/UX", "React", "Frontend", "WissKomm"] }]
 };
 
 export const AWARDS: Record<'en' | 'de', Award[]> = {
   en: [
-    { title: "Highest Bavarian Medal for Civil Rescues", description: "Awarded by Bavarian Prime Minister Dr. Markus Söder." },
-    { title: "Konrad Adenauer Scholarship", description: "Since 2015; Doctoral program 'Security and Development'." },
-    { title: "AERE Travel Grant", description: "2024 AERE Conference, Washington D.C." }
+    { title: "Bayerische Rettungsmedaille", description: "Verliehen durch den Bayerischen Ministerpräsidenten Dr. Markus Söder." },
+    { title: "Konrad-Adenauer-Stipendium", description: "Seit 2015; Promotionskolleg 'Sicherheit und Entwicklung'." },
+    { title: "AERE Travel Grant", description: "AERE-Konferenz 2024, Washington D.C." }
   ],
   de: [
     { title: "Bayerische Rettungsmedaille", description: "Verliehen durch den Bayerischen Ministerpräsidenten Dr. Markus Söder." },
