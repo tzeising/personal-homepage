@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from './components/Section';
 import logo from './components/TZ-logo.svg';
 import portrait from './components/tom.-zeising.jpg';
@@ -52,11 +52,29 @@ const NewsTicker: React.FC<{ lang: 'en' | 'de' }> = ({ lang }) => {
   );
 };
 
+const getInitialLang = (): 'en' | 'de' => {
+  if (typeof window === 'undefined') {
+    return 'en';
+  }
+
+  const storedLang = window.localStorage.getItem('lang');
+  if (storedLang === 'en' || storedLang === 'de') {
+    return storedLang;
+  }
+
+  return window.navigator.language.toLowerCase().startsWith('de') ? 'de' : 'en';
+};
+
 const App: React.FC = () => {
-  const [lang, setLang] = useState<'en' | 'de'>('en');
+  const [lang, setLang] = useState<'en' | 'de'>(getInitialLang);
   const t = TRANSLATIONS[lang];
 
   const toggleLang = () => setLang(prev => prev === 'en' ? 'de' : 'en');
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    window.localStorage.setItem('lang', lang);
+  }, [lang]);
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
@@ -116,7 +134,7 @@ const App: React.FC = () => {
               {/* Note for the User: Replace the src with your portrait file path, e.g., src="portrait.jpg" */}
               <div className="w-full h-full relative">
                 <div className="absolute inset-0 bg-zinc-50 flex items-center justify-center text-zinc-300 font-mono text-[10px] uppercase tracking-widest">
-                  Portrait Placeholder
+                  {t.hero.portraitPlaceholder}
                 </div>
                 {/* 
                   IMPORTANT: This image tag is set up to work as soon as you provide the file.
@@ -350,10 +368,12 @@ const App: React.FC = () => {
               <div className="hidden md:flex items-center justify-center">
                  <div className="w-full h-48 border border-zinc-200 flex items-center justify-center p-8 bg-zinc-50 relative group">
                     <span className="text-zinc-400 text-[10px] font-mono leading-loose text-center uppercase tracking-widest">
-                      Heidelberg University <br/>
-                      Department of Economics <br/>
-                      Bergheimer Str. 58 <br/>
-                      69115 Heidelberg, Germany
+                      {t.contact.addressLines.map((line) => (
+                        <React.Fragment key={line}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
                     </span>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-zinc-900 text-white transition-opacity flex items-center justify-center">
                       <span className="text-[10px] font-bold tracking-[0.3em] uppercase italic">{t.contact.office}</span>
@@ -366,7 +386,7 @@ const App: React.FC = () => {
 
         <footer className="py-20 text-center border-t border-zinc-100 mt-20">
           <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium">
-            &copy; {new Date().getFullYear()} Tom Zeising — Economics & Data Science
+            &copy; {new Date().getFullYear()} Tom Zeising — {t.footer.tagline}
           </p>
         </footer>
       </div>

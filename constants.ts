@@ -50,7 +50,8 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
       role2: "Data Science.", 
       role3: "SciComm.", 
       subtitle: "Based in Mannheim, Germany. Bridging the gap between environmental econometrics and accessible data narratives.",
-      openForWork: "Available for new opportunities in Economic Consulting & Data Science"
+      openForWork: "Available for new opportunities in Economic Consulting & Data Science",
+      portraitPlaceholder: "Portrait Placeholder"
     },
     about: { 
       title: "About", 
@@ -61,7 +62,18 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
     projects: { title: "Interests", subtitle: "Digital Projects" },
     experience: { title: "Experience", professional: "Professional", researchTeaching: "Research & Teaching" },
     expertise: { title: "Expertise", awards: "Awards & Grants", technical: "Technical Skills", languages: "Languages" },
-    contact: { title: "Connect", collab: "I am currently looking for roles in Economic Consulting, Data Science, and Public Outreach. Let's talk.", office: "Office" },
+    contact: { 
+      title: "Connect", 
+      collab: "I am currently looking for roles in Economic Consulting, Data Science, and Public Outreach. Let's talk.", 
+      office: "Office",
+      addressLines: [
+        "Heidelberg University",
+        "Department of Economics",
+        "Bergheimer Str. 58",
+        "69115 Heidelberg, Germany"
+      ]
+    },
+    footer: { tagline: "Economics & Data Science" },
     news: {
       prefix: "News",
       items: [
@@ -78,7 +90,8 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
       role2: "Data Science.", 
       role3: "WissKomm.", 
       subtitle: "Ansässig in Mannheim, Deutschland. Ich schlage die Brücke zwischen Umweltökonometrie und verständlichen Datengeschichten.",
-      openForWork: "Offen für neue Herausforderungen in der Wirtschaftsberatung & Data Science"
+      openForWork: "Offen für neue Herausforderungen in der Wirtschaftsberatung & Data Science",
+      portraitPlaceholder: "Portrait Platzhalter"
     },
     about: { 
       title: "Über mich", 
@@ -89,7 +102,18 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
     projects: { title: "Interessen", subtitle: "Digitale Projekte" },
     experience: { title: "Erfahrung", professional: "Beruflich", researchTeaching: "Forschung & Lehre" },
     expertise: { title: "Expertise", awards: "Auszeichnungen & Stipendien", technical: "Technische Skills", languages: "Sprachen" },
-    contact: { title: "Kontakt", collab: "Ich suche derzeit nach Positionen in der Wirtschaftsberatung, Data Science und Wissenschaftskommunikation. Melden Sie sich gerne.", office: "Büro" },
+    contact: { 
+      title: "Kontakt", 
+      collab: "Ich suche derzeit nach Positionen in der Wirtschaftsberatung, Data Science und Wissenschaftskommunikation. Melden Sie sich gerne.", 
+      office: "Büro",
+      addressLines: [
+        "Universität Heidelberg",
+        "Fakultät für Wirtschafts- und Sozialwissenschaften",
+        "Bergheimer Str. 58",
+        "69115 Heidelberg, Deutschland"
+      ]
+    },
+    footer: { tagline: "Ökonomie & Data Science" },
     news: {
       prefix: "Neuigkeiten",
       items: [
