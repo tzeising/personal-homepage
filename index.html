@@ -30,7 +30,31 @@
   </style>
 </head>
 <body class="bg-[#fafafa] text-zinc-900 antialiased selection:bg-zinc-200">
-  <div id="root"></div>
-  <script type="module" src="./index.tsx"></script>
+  <div id="root">
+    <div class="min-h-screen flex items-center justify-center px-6 py-16 text-center text-zinc-500">
+      <div class="max-w-md space-y-4">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400">Loading</p>
+        <p class="text-base">
+          If this message persists, the JavaScript bundle failed to load. Make sure you are serving the
+          built files (for example, run <span class="font-mono">npm run build</span> and deploy the
+          <span class="font-mono">dist/</span> directory).
+        </p>
+        <noscript>
+          <p class="text-sm text-zinc-600">
+            JavaScript is disabled. Please enable JavaScript to view this site.
+          </p>
+        </noscript>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import('./index.tsx').catch((error) => {
+      console.error('Failed to load the app bundle.', error);
+      const root = document.getElementById('root');
+      if (root && root.children.length === 0) {
+        root.textContent = 'Failed to load the app bundle.';
+      }
+    });
+  </script>
 </body>
 </html>
