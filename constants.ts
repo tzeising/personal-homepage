@@ -50,12 +50,11 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
       role2: "Data Science.", 
       role3: "SciComm.", 
       subtitle: "Based in Mannheim, Germany. Bridging the gap between environmental econometrics and accessible data narratives.",
-      openForWork: "Available for new opportunities in Economic Consulting & Data Science",
       portraitPlaceholder: "Portrait Placeholder"
     },
     about: { 
       title: "About", 
-      bio: "I am a PhD candidate in Economics at Heidelberg University, specializing in Environmental and Developmental Economics. My work integrates causal inference with modern data science tools like satellite data analysis and NLP. Currently finishing my PhD, I am open to new professional challenges in consulting and data-driven roles where I can leverage my expertise in policy analysis and computational social science.",
+      bio: "I am a PhD candidate in Economics at Heidelberg University, specializing in Environmental and Developmental Economics. My work integrates causal inference with modern data science tools like satellite data analysis and NLP, leveraging my expertise in policy analysis and computational social science.",
       education: "Education"
     },
     research: { title: "Research", viewPaper: "View Paper" },
@@ -90,12 +89,11 @@ export const TRANSLATIONS: Record<'en' | 'de', TranslationSet> = {
       role2: "Data Science.", 
       role3: "WissKomm.", 
       subtitle: "Ansässig in Mannheim, Deutschland. Ich schlage die Brücke zwischen Umweltökonometrie und verständlichen Datengeschichten.",
-      openForWork: "Offen für neue Herausforderungen in der Wirtschaftsberatung & Data Science",
       portraitPlaceholder: "Portrait Platzhalter"
     },
     about: { 
       title: "Über mich", 
-      bio: "Ich bin Doktorand der Wirtschaftswissenschaften an der Universität Heidelberg mit Spezialisierung auf Umwelt- und Entwicklungsökonomie. In meiner Arbeit verbinde ich kausale Inferenz mit modernen Data-Science-Tools. Kurz vor Abschluss meiner Promotion suche ich nach neuen beruflichen Herausforderungen in der Beratung oder im Data-Science-Bereich, um meine Expertise in Politikanalyse und Computational Social Science einzubringen.",
+      bio: "Ich bin Doktorand der Wirtschaftswissenschaften an der Universität Heidelberg mit Spezialisierung auf Umwelt- und Entwicklungsökonomie. In meiner Arbeit verbinde ich kausale Inferenz mit modernen Data-Science-Tools und bringe meine Expertise in Politikanalyse und Computational Social Science ein.",
       education: "Bildungsweg"
     },
     research: { title: "Forschung", viewPaper: "Paper ansehen" },

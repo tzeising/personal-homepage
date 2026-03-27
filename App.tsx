@@ -133,12 +133,6 @@ const App: React.FC = () => {
         {/* Hero */}
         <header className="py-24 md:py-32 flex flex-col md:flex-row gap-16 items-start md:items-center">
           <div className="flex-1">
-            {/* Open for Work Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 text-white rounded-full mb-8">
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="text-[10px] font-bold uppercase tracking-widest">{t.hero.openForWork}</span>
-            </div>
-            
             <h2 className="serif text-5xl md:text-7xl font-normal leading-tight text-zinc-900 max-w-4xl">
               {t.hero.role1} <br />
               {t.hero.role2} <br />
