@@ -52,7 +52,6 @@ export interface TranslationSet {
     role2: string;
     role3: string;
     subtitle: string;
-    openForWork: string;
     portraitPlaceholder: string;
   };
   about: {
