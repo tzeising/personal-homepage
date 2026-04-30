@@ -34,43 +34,32 @@ export interface Project {
   tags: string[];
 }
 
-export interface NewsItem {
-  text: string;
-  url: string;
-}
-
 export interface TranslationSet {
   nav: {
     about: string;
+    experience: string;
     research: string;
     projects: string;
-    experience: string;
     contact: string;
   };
   hero: {
-    role1: string;
-    role2: string;
-    role3: string;
-    subtitle: string;
-    portraitPlaceholder: string;
+    tagline: string;
+    intro: string;
   };
   about: {
     title: string;
-    bio: string;
     education: string;
-  };
-  research: {
-    title: string;
-    viewPaper: string;
-  };
-  projects: {
-    title: string;
-    subtitle: string;
   };
   experience: {
     title: string;
     professional: string;
     researchTeaching: string;
+  };
+  research: {
+    title: string;
+  };
+  projects: {
+    title: string;
   };
   expertise: {
     title: string;
@@ -80,13 +69,7 @@ export interface TranslationSet {
   };
   contact: {
     title: string;
-    collab: string;
-    office: string;
-    addressLines: string[];
-  };
-  news: {
-    prefix: string;
-    items: NewsItem[];
+    blurb: string;
   };
   footer: {
     tagline: string;

@@ -5,22 +5,15 @@ interface SectionProps {
   id: string;
   title: string;
   children: React.ReactNode;
-  className?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, children, className = "" }) => {
+const Section: React.FC<SectionProps> = ({ id, title, children }) => {
   return (
-    <section id={id} className={`py-20 border-t border-zinc-200 ${className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="md:col-span-1">
-          <h2 className="text-sm font-medium tracking-widest uppercase text-zinc-400">
-            {title}
-          </h2>
-        </div>
-        <div className="md:col-span-3">
-          {children}
-        </div>
-      </div>
+    <section id={id} className="py-16 border-t border-zinc-200">
+      <h2 className="text-[10px] font-mono uppercase tracking-[0.25em] text-zinc-400 mb-10">
+        {title}
+      </h2>
+      {children}
     </section>
   );
 };
